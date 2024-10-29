@@ -1,0 +1,293 @@
+@font-face {
+    font-family: rudra;
+    src: url(/Freight\ Big\ Pro\ Black.otf);
+}
+
+@font-face {
+    font-family: madda;
+    src: url(/Freight\ Big\ Pro\ Light.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: " freight big pro";
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    width: 100%;
+    background-color: #000;
+}
+
+#loader {
+    width: 100%;
+    height: 100vh;
+    background-color: #F5E41B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #000;
+    position: fixed;
+}
+
+#yellow1 {
+    width: 100%;
+    height: 100%;
+    background-color: #F5E41B;
+    position: absolute;
+    z-index: 8;
+}
+
+#yellow2 {
+    width: 100%;
+    height: 100%;
+    background-color: #F5E41B;
+    position: absolute;
+    z-index: 7;
+}
+
+#loader video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    z-index: 6;
+}
+
+#loader h1 {
+    font-size: 6.9vw;
+    line-height: 6vw;
+    font-weight: lighter;
+    letter-spacing: -3px;
+    font-family: madda;
+    position: relative;
+    z-index: 9;
+    text-align: center;
+}
+
+#loader h1 em {
+    font-family: madda;
+}
+
+#nav {
+    position: absolute;
+    width: 100%;
+    padding: 20px 40px;
+}
+
+#nav svg path {
+    fill: #000;
+}
+
+#page1 {
+    height: 100vh;
+    width: 100%;
+    background-color: #F5E41B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+    text-align: center;
+}
+
+#page1 h1 {
+    font-size: 6.9vw;
+    line-height: 6vw;
+    font-weight: lighter;
+    letter-spacing: -3px;
+    font-family: madda;
+}
+
+#page1 h1 em {
+    font-family: madda;
+}
+
+#page2 {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: madda;
+    font-weight: lighter;
+    background-size: cover;
+    background-position: center;
+}
+
+.elem {
+    /* background-color: #F5E41B; */
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+   
+
+}
+
+.elem h2 {
+    font-size: 6.8vw;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #fff;
+    position: relative;
+    z-index: 9;
+    line-height: 5.1vw;
+    font-style: normal;
+    transition: all ease 0.3s;
+}
+.elem .blur{
+    width: 40%;
+    position: absolute;
+    height: 50%;
+    left: 50%;
+    top: 50%;
+    background: linear-gradient(to right  , #f5e31be7 , #F5E41B , #f5e31be7);
+    box-shadow:  10px 0px 1px  #F5E41B , -10px 0px 1px   #F5E41B;
+    transform: translate(-50% , -50%);
+    /* background-color: red; */
+    z-index: 8;
+    
+    
+
+}
+.elem .moving {
+
+    width: 100%;
+    white-space: nowrap;
+    padding: 15px 0;
+    position: absolute;
+    overflow: hidden;
+    top: 30%;
+    transform: translate(0 , -12%) scaleY(0);
+   transition: all ease 0.5s;
+}
+
+
+.elem .moving .moving-in {
+    background-color: #F5E41B;
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: moving;
+    animation-duration:11s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+.elem .moving .moving-in h5 {
+
+    display: inline-block;
+    font-family: madda;
+    text-transform: uppercase;
+    font-weight: rudra;
+    color: black;
+    margin-right: 30px;
+    font-size: 19px;
+    opacity: 0;
+    transition: all ease 0.5s;
+
+
+}
+
+@keyframes moving {
+    from {
+        transform: translateX(0);
+        
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+.elem:hover .moving
+{
+    transform: translate(0 , -12%) scaleY(1);
+   
+}
+
+.elem h2:hover{
+     /* color: black; */
+    transition: all ease 0.5s;
+    font-style: italic;
+}
+
+
+.elem:hover .moving h5{
+    opacity: 1;
+   
+}
+
+
+#page3 {
+    min-height: 100vh;
+    width: 100%;
+
+    background-color: #ffff;
+}
+.image-container{
+    padding: 2.4vw;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.image-div{
+    width: 29vw;
+    /* height: 35vw; */
+    /* background-color: #000; */
+    position: relative ; 
+    margin: 1.8vw 1vw;
+   overflow: hidden; 
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: #0000001e;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all ease-in-out 0.6s;
+    z-index: 9;
+    
+}
+.overlay p{
+    text-align: center;
+    font-size: 2vw;
+    margin-left: 1.6vw;
+    color: #ffff;
+    opacity: 0;
+
+   
+}
+.image-div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all ease-in-out 0.6s;
+    object-position: center;
+    
+}
+.image-div:hover img{
+    opacity: 0;
+    transition: all ease-in-out 0.6s;
+    background-color: #000;
+    cursor: pointer;
+    scale: 1.05;
+    z-index: 10;
+}
+.image-div:hover .overlay p{
+    opacity: 1;
+    
+}
